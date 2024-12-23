@@ -5,11 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class NHTQuanTrimodel extends Model
+class NHT_SanPham extends Model
 {
     use HasFactory;
-    protected $table = 'NHT_QuanTri';
-    
-
-
+    protected $table = 'NHTSanPham';
 }

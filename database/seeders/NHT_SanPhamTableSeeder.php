@@ -17,27 +17,29 @@ class NHT_SanPhamTableSeeder extends Seeder
             'NHTMaSP' => 'SP001',
             'NHTTenSP' => 'Cay phu quy',
             'NHTHinhAnh' => 'images\SanPham\hinh1.jpg',
-            'NHTGiaSP' => 100000,
+            'NHTDonGia' => 10000,
             'NHTSoLuong' => 10,
-            'NHTMaLoai' => 'L001',
+            'NHTMaLoai' => 1,
             'NHTTrangThai' => 1,
         ]);
         DB::table('NHTSanPham')->insert([
             'NHTMaSP' => 'SP002',
             'NHTTenSP' => 'cay dai phu gia',
             'NHTHinhAnh' => 'images\SanPham\hinh2.jpg',
-            'NHTGiaSP' => 200000,
+            'NHTDonGia' => 10000,
             'NHTSoLuong' => 20,
-            'NHTMaLoai' => 'L002',
+    
+            'NHTMaLoai' => 1,
             'NHTTrangThai' => 1,
         ]);
         DB::table('NHTSanPham')->insert([
             'NHTMaSP' => 'SP003',
             'NHTTenSP' => 'cay hanh phuc',
             'NHTHinhAnh' => 'images\SanPham\hinh3.jpg',
-            'NHTGiaSP' => 300000,
-            'NHTSoLuong' => 30,
-            'NHTMaLoai' => 'L003',
+           'NHTDonGia' => 10000, 
+           'NHTSoLuong' => 30,
+        
+            'NHTMaLoai' => 1,
             'NHTTrangThai' => 1,
         ]);
     }

@@ -12,34 +12,37 @@ class NHT_HoaDonTableSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('NHT_HoaDon')->insert([
+        DB::table('NHTHoaDon')->insert([
             'NHTMaHD'=>'HD001',
-            'NHTMaKH'=>'KH001',
+            'NHTMaKH'=>1,
             'NHTNgayHD'=>'2022-01-01',
             'NHTHoTenKH'=>'Nguyen Van A',
-            'NHTDiaChi'=>'Ha Noi',
+            'NHTEmail'=>'EMAIL',
             'NHTDienThoai'=>'0123456789',
-            'NHTTongTien'=>'100000',
+            'NHTDiaChi'=>'Ha Noi',
+            'NHTTongTriGia'=>100000,
             'NHTTrangThai'=>0
         ]);
-        DB::table('NHT_HoaDon')->insert([
+        DB::table('NHTHoaDon')->insert([
             'NHTMaHD'=>'HD002',
-            'NHTMaKH'=>'KH002',
+            'NHTMaKH'=>2,
             'NHTNgayHD'=>'2022-01-01',
             'NHTHoTenKH'=>'Nguyen Van B',
-            'NHTDiaChi'=>'Ha Noi',
+            'NHTEmail'=>'EMAIL',
             'NHTDienThoai'=>'0123456789',
-            'NHTTongTien'=>'100000',
+            'NHTDiaChi'=>'Ha Noi',
+            'NHTTongTriGia'=>100000,
             'NHTTrangThai'=>0
         ]);
-        DB::table('NHT_HoaDon')->insert([
+        DB::table('NHTHoaDon')->insert([
             'NHTMaHD'=>'HD003',
-            'NHTMaKH'=>'KH003',
+            'NHTMaKH'=>3,
             'NHTNgayHD'=>'2022-01-01',
             'NHTHoTenKH'=>'Nguyen Van C',
+            'NHTEmail'=>'EMAIL',
             'NHTDiaChi'=>'Ha Noi',
             'NHTDienThoai'=>'0123456789',
-            'NHTTongTien'=>'100000',
+            'NHTTongTriGia'=>100000,
             'NHTTrangThai'=>0
         ]);
     }

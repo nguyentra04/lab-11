@@ -17,7 +17,7 @@ class NHT_KhachHangTableSeeder extends Seeder
             'NHTTenKH'=>'Nguyen Van A',
             'NHTEmail'=>'EMAIL',
             'NHTMatKhau'=>'123456',
-            'NHTSDT'=>'0123456789',
+            'NHTDienThoai'=>'0123456789',
             'NHTDiaChi'=>'Dia chi',
             'NHTNgayDangKy'=>'2022-01-01',
             'NHTTrangThai'=>0
@@ -27,7 +27,7 @@ class NHT_KhachHangTableSeeder extends Seeder
             'NHTTenKH'=>'Nguyen Van B',
             'NHTEmail'=>'EMAIL',
             'NHTMatKhau'=>'123456',
-            'NHTSDT'=>'0123456789',
+            'NHTDienThoai'=>'0123456789',
             'NHTDiaChi'=>'Dia chi',
             'NHTNgayDangKy'=>'2022-01-01',
             'NHTTrangThai'=>0
@@ -37,7 +37,7 @@ class NHT_KhachHangTableSeeder extends Seeder
             'NHTTenKH'=>'Nguyen Van C',
             'NHTEmail'=>'EMAIL',
             'NHTMatKhau'=>'123456',
-            'NHTSDT'=>'0123456789',
+            'NHTDienThoai'=>'0123456789',
             'NHTDiaChi'=>'Dia chi',
             'NHTNgayDangKy'=>'2022-01-01',
             'NHTTrangThai'=>0

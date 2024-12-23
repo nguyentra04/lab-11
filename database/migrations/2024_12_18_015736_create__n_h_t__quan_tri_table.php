@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('NHT_QuanTri', function (Blueprint $table) {
-            $table->id()->autoIncrement();
+            $table->id();
             $table->string('NHTTaiKhoan',255)->unique();
             $table->string('NHTMatKhau',255);
             $table->tinyInteger('NHTTrangThai');

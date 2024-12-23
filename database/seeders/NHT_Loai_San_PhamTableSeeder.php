@@ -13,19 +13,18 @@ class NHT_Loai_San_PhamTableSeeder extends Seeder
     public function run(): void
     {
         
-        
-        DB::table('NHT_Loai_San_Pham')->insert([
-            'NHTMaLoai'=>'L001',
+        DB::table('NHTLoaiSanPham')->insert([
+            'NHTMaLoai'=>'l011',
             'NHTTenLoai'=>'cay canh van phong',
             'NHTTrangThai'=>0
         ]);
-        DB::table('NHT_Loai_San_Pham')->insert([
-            'NHTMaLoai'=>'L002',
+        DB::table('NHTLoaiSanPham')->insert([
+            'NHTMaLoai'=>'l02',
             'NHTTenLoai'=>'cay de ban',
             'NHTTrangThai'=>0
         ]);
-        DB::table('NHT_Loai_San_Pham')->insert([
-            'NHTMaLoai'=>'L003',
+        DB::table('NHTLoaiSanPham')->insert([
+            'NHTMaLoai'=>'l03',
             'NHTTenLoai'=>'cay phong thuy',
             'NHTTrangThai'=>0
         ]);

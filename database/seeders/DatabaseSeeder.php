@@ -1,8 +1,7 @@
 <?php
-
 namespace Database\Seeders;
-
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,7 +18,14 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         $this->call([
-            NHT_QuanTriTableSeeder::class
+            NHT_QuanTriTableSeeder::class,
+            NHT_CTHoaDonTableSeeder::class,
+            NHT_HoaDonTableSeeder::class,
+            NHT_KhachHangTableSeeder::class,
+            NHT_SanPhamTableSeeder::class,
+            NHT_LoaiSanPhamTableSeeder::class,
+            
+            
         ]);
         
     }

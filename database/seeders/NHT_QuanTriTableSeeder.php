@@ -13,16 +13,14 @@ class NHT_QuanTriTableSeeder extends Seeder
     public function run(): void
     {
         $NHTMatKhau = md5('123456');
-        DB::table('NHT_QuanTri')->insert
-        ([ 
+        DB::table('NHT_QuanTri')->insert([ 
             'NHTTaiKhoan' => 'nht@gmail.com',
-            'NHTMatKhau' => md5('123456'),
+            'NHTMatKhau' => $NHTMatKhau,
             'NHTTrangThai' => 0
         ]);
-        DB::table('NHT_QuanTri')->insert(
-        [
-            'NHTTaiKhoan' => 'EMAIL',
-            'NHTMatKhau' => md5('123456'),
+        DB::table('NHT_QuanTri')->insert([
+            'NHTTaiKhoan' => '001304022051',
+            'NHTMatKhau' => $NHTMatKhau,
             'NHTTrangThai' => 1
         ]);
 

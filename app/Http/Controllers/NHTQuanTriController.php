@@ -6,36 +6,12 @@ use Illuminate\Http\Request;
 
 class NHTQuanTriController extends Controller
 {
-    //hien thi danh sach
-    public function list()
+    public function nhtlogin()
     {
-        $nhtquantris = NHTQuanTri::all();
-        return view('nhtquantri.list', [$nhtquantris=>'nhtquantris']);
+        return view ('nhtlogin.nht-login');
     }
-
-    //hien thi trang them
-    public function add()
+    public function nhtloginsubmit(Request $request)
     {
-        return view('nhtquantri.add');
-
-    }
-
-    //luu du lieu
-    public function store(Request $request)
-    {
-        $nhtquantris = new NHTQuanTri();
-        $nhtquantris->NHTTaiKhoan = $request->NHTTaiKhoan;
-        $nhtquantris->NHTMatKhau = $request->NHTMatKhau;
-        $nhtquantris->NHTTrangThai = $request->NHTTrangThai;
-        $nhtquantris->save();
-        return redirect()->route('nhtquantris.list');
-    }
-
-    //hien thi trang sua
-    public function edit($id)
-    {
-        $nhtquantris = NHTQuanTri::find($id);
-        return view('nhtquantris.edit', [$nhtquantris=>'nhtquantris']);
-
+        return view ('nhtlogin.nht-loginsubmit');
     }
 }
