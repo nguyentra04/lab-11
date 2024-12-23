@@ -29,8 +29,9 @@
                             <td>{{ $item->NHTTenLoai }}</td>
                             <td>{{ $item->NHTTrangThai }}</td>
                             <td>
-                                <a href="{{ route('NHTadmins.NHTloaisp.nhtedit', $item->NHTMaLoai) }}" class="btn btn-warning">Sửa</a>
-                                <a href="{{ route('NHTadmins.NHTloaisp.nhtdelete', $item->NHTMaLoai) }}" class="btn btn-danger">Xóa</a>
+                                <a href="{{ route('NHTadmins.NHTloaisp.nhtedit', $item->id) }}" class="btn btn-warning">Sửa</a>
+                                <a href="{{ route('NHTadmins.NHTloaisp.nhtdelete', $item->id) }}" class="btn btn-danger" 
+                                    onclick="return confirm('Bạn có chắc muốn xóa không ?')">Xóa</a>
                             </td>  
                         </tr>
                     @empty

@@ -22,8 +22,15 @@ class NHTLoaiSPController extends Controller
     }
 
     public function NHTcreateSubmit(Request $request)
+
     {
-        $nhtloaisps = new NHT_Loai_SP();
+        $validationdate = $request->validate([
+            'NHTMaLoai'=>'required|unique:NHTLoaiSanPham',
+            'NHTTenLoai'=>'required',
+            'NHTTrangThai'=>'required',
+        ]);
+        //ghi dữ liệu xuống db
+        $nhtloaisps = new NHT_Loai_SP;
         $nhtloaisps->NHTMaLoai = $request->NHTMaLoai;
         $nhtloaisps->NHTTenLoai = $request->NHTTenLoai;
         $nhtloaisps->NHTTrangThai = $request->NHTTrangThai;
@@ -31,25 +38,25 @@ class NHTLoaiSPController extends Controller
         return redirect()->route('NHTadmins.NHTloaisp.nhtcreatesubmit');
     }
     //edit 
-    public function NHTedit()
+    public function NHTedit($id)
     {
         return view('NHTadmins.NHTLoaiSP.NHT-edit');
     }
     //get nht-edit submit
-    public function NHTeditsubmit($id){
-        $nhtloaisps = NHT_Loai_SP::find($id);
-        return view('NHTadmins.NHTLoaiSP.NHT-edit',['nhtloaisps'=>$nhtloaisps]);
-    }
-    //update
 
-    public function NHTupdatesubmit(Request $request,$id)
+
+    public function NHTeditsubmit(Request $request)
     {
-        $nhtloaisps = NHT_Loai_SP::find($id);
+        $validationdate = $request->validate([
+            'NHTMaLoai'=>'required',
+            'NHTTenLoai'=>'required',
+        ]);
+        $nhtloaisps = NHT_Loai_SP::find($request->id);
         $nhtloaisps->NHTMaLoai = $request->NHTMaLoai;
         $nhtloaisps->NHTTenLoai = $request->NHTTenLoai;
         $nhtloaisps->NHTTrangThai = $request->NHTTrangThai;
         $nhtloaisps->save();
-        return redirect()->route('NHTadmins.NHTloaisp.nhteditsubmit
+        return redirect()->route('NHTadmins.NHTloaisp.NHTeditsubmit
         ',[$id])->with('Thông báo','Sửa thành công');
     }
     //delete
@@ -60,6 +67,9 @@ class NHTLoaiSPController extends Controller
     //get nht-delete submit
     public function NHTdeletesubmit($id){
         $nhtloaisps = NHT_Loai_SP::find($id);
-        return view('NHTadmins.NHTLoaiSP.NHT-delete',['nhtloaisps'=>$nhtloaisps]);
+        $nhtloaisps->remove();
+        return redirect()->route('NHTadmins.NHTloaisp.NHTList',
+        [$id])->with('Thông báo','Xóa thành công');
+
     }
 }

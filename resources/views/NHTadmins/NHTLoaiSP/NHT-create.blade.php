@@ -16,13 +16,19 @@
                         <div class="mb-3 row">
                             <label for="NHTMaLoai" class="col-sm-2 col-form-label">Mã Loại</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="NHTMaLoai" name="NHTMaLoai">
+                              <input type="text" class="form-control" id="NHTMaLoai" name="NHTMaLoai" value="{{ old('NHTMaLoai') }}">
+                                @error('NHTMaLoai')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="NHTTenLoai" class="col-sm-2 col-form-label">Tên Loại</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="NHTMaLoai" name="NHTTenLoai">
+                              <input type="text" class="form-control" id="NHTMaLoai" name="NHTTenLoai" value="{{ old('NHTTenLoai') }}">
+                              @error('NHTTenLoai')
+                                <span class="text-danger">{{ $message }}</span>
+                              @enderror
                             </div>
                         </div>
                         <div class="mb-3 row">
